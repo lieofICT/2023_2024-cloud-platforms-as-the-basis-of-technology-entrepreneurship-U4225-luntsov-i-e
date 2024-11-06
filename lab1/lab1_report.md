@@ -24,6 +24,8 @@ Date of finished: 06.11.2024
 
 В ходе лабораторной работы была выполнена настройка доступа, создание виртуальной машины в Google Cloud Platform и проверка влияния ролей на доступ к Cloud Storage.
 
+Подробнее раскажу далее.
+
 ### Шаг 1: Создание Service Account с ролью Storage Admin
 
 1. Перешел в раздел **IAM & Admin** > **Service Accounts**.
