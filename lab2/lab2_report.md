@@ -1,6 +1,6 @@
 <div align="center">
 
-University:[ITMO University](https://itmo.ru/ru/) 
+University: [ITMO University](https://itmo.ru/ru/) 
 
 Faculty: [FICT](https://fict.itmo.ru)
 
