@@ -18,9 +18,9 @@ Date of create: 06.11.2024
 
 Date of finished: 06.11.2024
 
----
+</div>
 
-## Описание работы
+---
 
 В ходе лабораторной работы была выполнена настройка доступа, создание виртуальной машины в Google Cloud Platform и проверка влияния ролей на доступ к Cloud Storage.
 
@@ -30,8 +30,8 @@ Date of finished: 06.11.2024
 2. Создал новый service account с именем `iluntsov-sa-lab1`.
 3. Назначил роль **Storage Admin**.
 
-![Создание Service Account - Часть 1](lab1/Шаг1_(1).png)
-![Создание Service Account - Часть 2](/lab1/Шаг1 (2).png)
+![Создание Service Account - Часть 1](Шаг1_(1).png)
+![Создание Service Account - Часть 2](Шаг1_(2).png)
 
 ### Шаг 2: Создание виртуальной машины в Google Cloud
 
@@ -39,9 +39,9 @@ Date of finished: 06.11.2024
 2. Создал новую виртуальную машину с именем `iluntsov-vm-lab1`.
 3. Выбрал тип машины **e2-micro** и включил режим **spot**.
 
-![Создание VM - Часть 1](/lab1/Шаг2_(1).png)
-![Создание VM - Часть 2](link_to_screenshot4.png)
-![Создание VM - Часть 3](link_to_screenshot5.png)
+![Создание VM - Часть 1](Шаг2_(1).png)
+![Создание VM - Часть 2](Шаг2_(2).png)
+![Создание VM - Часть 3](Шаг2_(3).png)
 
 ### Шаг 3: Копирование файлов из Cloud Storage в VM
 
@@ -54,8 +54,8 @@ gsutil cp gs://lab1-bucket-itmo/* ~/lab1-files
 ls -lah ~/lab1-files
 ```
 
-![Копирование файлов - Часть 1](link_to_screenshot6.png)
-![Копирование файлов - Часть 2](link_to_screenshot7.png)
+![Копирование файлов - Часть 1](Шаг3_(1).png)
+![Копирование файлов - Часть 2](Шаг3_(2).png)
 
 ### Шаг 4: Изменение роли Service Account на Compute Viewer
 
@@ -63,9 +63,9 @@ ls -lah ~/lab1-files
 2. Изменил роль service account `iluntsov-sa-lab1` с **Storage Admin** на **Compute Viewer**.
 3. Повторил попытку копирования файлов и убедился, что доступ ограничен.
 
-![Изменение роли - Часть 1](link_to_screenshot8.png)
-![Изменение роли - Часть 2](link_to_screenshot9.png)
+![Изменение роли - Часть 1](Шаг4_(1).png)
+![Изменение роли - Часть 2](Шаг4_(1).png)
 
 ### Выводы
 
-Изменение роли с **Storage Admin** на **Compute Viewer** ограничивает доступ к Cloud Storage, что подтвердилось невозможностью повторного копирования файлов. Для работы с бакетами необходимы права, включенные в роли, такие как **Storage Admin** или **Storage Object Viewer**.
+Изменение роли с **Storage Admin** на **Compute Viewer** ограничивает доступ к Cloud Storage, из-за чего не получилось копировать файлы. Для работы с бакетами необходимы права, включенные в роли, такие как **Storage Admin**.
